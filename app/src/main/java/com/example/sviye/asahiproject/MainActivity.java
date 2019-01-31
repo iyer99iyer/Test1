@@ -1,37 +1,33 @@
 package com.example.sviye.asahiproject;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static int SPLASH_TIME_OUT = 1000;
 
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    DocumentReference doc1 = db.document("Price List/18X7");
-    DocumentReference doc2 = db.document("Price List/6X19(12\\6\\1)");
-    DocumentReference doc3 = db.document("Price List/6X36");
-    DocumentReference doc4 = db.document("Price List/6X19");
-
-    DocumentReference doc1F = db.document(doc1+"core/fmc");
-    DocumentReference doc1S = db.document(doc1+"core/sc");
-    DocumentReference doc2F = db.document(doc2+"core/fmc");
-    DocumentReference doc2S = db.document(doc2+"core/sc");
-    DocumentReference doc3F = db.document(doc3+"core/fmc");
-    DocumentReference doc3S = db.document(doc3+"core/sc");
-    DocumentReference doc4F = db.document(doc4+"core/fmc");
-    DocumentReference doc4S = db.document(doc4+"core/sc");
+    ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(loginIntent);
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
 
-
+        logo = findViewById(R.id.imageView);
     }
+
 }
