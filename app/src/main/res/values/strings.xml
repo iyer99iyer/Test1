@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Asahi Project</string>
+    
+    <string-array name="diameters">
+        <item>6mm</item>
+        <item>8mm</item>
+        <item>9mm</item>
+        <item>10mm</item>
+        <item>11mm</item>
+        <item>12mm</item>
+        <item>13mm</item>
+        <item>14mm</item>
+        <item>15mm</item>
+        <item>16mm</item>
+        <item>18mm</item>
+        <item>19mm</item>
+        <item>20mm</item>
+        <item>22mm</item>
+        <item>24mm</item>
+        <item>25mm</item>
+        <item>26mm</item>
+        <item>28mm</item>
+        <item>30mm</item>
+        <item>32mm</item>
+        <item>35mm</item>
+        <item>36mm</item>
+        <item>38mm</item>
+        <item>40mm</item>
+        <item>44mm</item>
+        <item>48mm</item>
+        <item>52mm</item>
+    </string-array>
 </resources>

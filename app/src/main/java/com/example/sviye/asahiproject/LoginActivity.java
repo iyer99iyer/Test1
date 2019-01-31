@@ -12,12 +12,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "LoginActivity";
 
     private FirebaseAuth mAuth;
 
@@ -32,13 +33,13 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+
         passwordEditText = findViewById(R.id.passwordEditText);
         emailEditText = findViewById(R.id.emailEditText);
         progressBar = findViewById(R.id.progressBar);
 
 
     }
-
 
 
     public void loginUpdate(View view){
