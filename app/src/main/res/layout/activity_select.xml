@@ -45,7 +45,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/buttonunselected"
-        android:text="6X19"
+        android:text="6X36"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
@@ -62,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/buttonunselected"
-        android:text="6X19"
+        android:text="8X19"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
@@ -79,7 +79,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/buttonunselected"
-        android:text="6X19"
+        android:text="18X7"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
@@ -88,39 +88,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/grpBtn2" />
 
-    <LinearLayout
-        android:id="@+id/button4"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="304dp"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+
+    <Button
+        android:id="@+id/grpCoreBtn0"
+        android:layout_width="178dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttonunselected"
+        android:text="FMC"
+        android:textAllCaps="false"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grpBtn3"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/grpBtn3" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="Steel Core"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Fibre Core"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/grpCoreBtn1"
+        android:layout_width="178dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/buttonunselected"
+        android:text="SC"
+        android:textAllCaps="false"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grpBtn3" />
 
 
     <TextView
@@ -128,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
@@ -144,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/grpBtn3"
         app:layout_constraintVertical_bias="0.127" />
 
     <Spinner
@@ -152,17 +147,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintTop_toBottomOf="@+id/grpBtn3"
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <Button
         android:id="@+id/getPricebtn"

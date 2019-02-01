@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 public class SelectActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    private Button[] btn = new Button[4];
+    private Button[] btn = new Button[6];
     private Button btn_unfocus;
-    private int[] btn_id = {R.id.grpBtn0, R.id.grpBtn1, R.id.grpBtn2, R.id.grpBtn3};
-    String buttonConst;
+    private int[] btn_id = {R.id.grpBtn0, R.id.grpBtn1, R.id.grpBtn2, R.id.grpBtn3, R.id.grpCoreBtn0, R.id.grpCoreBtn1};
+    String buttonConst, buttonCore;
 
     Spinner spinner;
     String spinnerDia;
@@ -39,7 +39,6 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
             btn[i].setBackgroundResource(R.drawable.buttonunselected);
             btn[i].setOnClickListener(this);
         }
-
         btn_unfocus = btn[0];
 
     }
@@ -67,9 +66,17 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
                 setFocus(btn_unfocus, btn[3]);
                 buttonConst = btn[0].getText().toString();
                 break;
+
+            case R.id.grpCoreBtn0:
+                setFocus(btn_unfocus, btn[4]);
+                break;
+            case R.id.grpCoreBtn1:
+                setFocus(btn_unfocus, btn[5]);
+                break;
         }
 
     }
+
 
     private void setFocus(Button btn_unfocus, Button btn_focus){
         btn_unfocus.setTextColor(Color.rgb(49, 50, 51));
