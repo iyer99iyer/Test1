@@ -157,7 +157,7 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/grpBtn3"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintVertical_bias="0.14999998" />
 
     <Button
         android:id="@+id/getPricebtn"
@@ -169,6 +169,8 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/button"
         android:elevation="100dp"
+        android:textAllCaps="false"
+        android:onClick="getPrice"
         android:text="Get Price"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
