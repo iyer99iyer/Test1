@@ -25,7 +25,7 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
 
     private static final String TAG = "PriceDiscount";
 
-    TextView priceTextView, priceFinalTextView;
+    TextView priceTextView, priceFinalTextView, priceFinalText;
 
     EditText discountEditText;
     Double removeDisPrice;
@@ -55,6 +55,7 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
 
         priceTextView = findViewById(R.id.priceTextView);
         priceFinalTextView = findViewById(R.id.priceFinalTextView);
+        priceFinalText = findViewById(R.id.priceFinalText);
 
         getFinalPriceBtn = findViewById(R.id.getFinalPrice);
         getFinalPriceWithGSTBtn = findViewById(R.id.getFinalPriceWithGST);
@@ -77,6 +78,7 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
             btn[i] = findViewById(btn_id[i]);
             btn[i].setBackgroundResource(R.drawable.buttonunselected);
             btn[i].setOnClickListener(this);
+            disableBtn(btn[i]);
         }
         btn_unfocus = btn[0];
 
@@ -106,8 +108,10 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
                             Log.d(TAG, "onSuccess: " + "Diameter : " + diameterAns
                                     + " Price : " + priceAns.toString());
 
-                            /*Toast.makeText(PriceDiscount.this,path+"Diameter : " +
-                                    diameterAns + " Price : " + priceAns.toString(),Toast.LENGTH_LONG).show();*/
+                            for (int i = 0; i < btn.length; i++) {
+                                btn[i].setEnabled(true);
+                                btn[i].setTextColor(Color.rgb(49, 50, 51));
+                            }
 
                             priceTextView.setText(priceAnsString);
 
@@ -173,6 +177,9 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
 
     public void getDisPrice(View view){
         finalPrice();
+
+        priceFinalText.setText("Final Price");
+
         try {
             InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getFinalPriceBtn.getWindowToken(), 0);
@@ -199,6 +206,7 @@ public class PriceDiscount extends AppCompatActivity implements View.OnClickList
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         String finalprice = decimalFormat.format(finalPrice);
 
+        priceFinalText.setText("Final Price + GST");
         priceFinalTextView.setText(finalprice);
     }
 
