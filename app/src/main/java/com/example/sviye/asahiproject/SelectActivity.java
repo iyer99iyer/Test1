@@ -109,11 +109,11 @@ public class SelectActivity extends AppCompatActivity
         switch (v.getId()){
             case R.id.grpCoreBtn0:
                 setCoreFocus(coreBtn_unfocus, coreBtn[0]);
-                coreString = coreBtn[0].getText().toString();
+                coreString = coreBtn[0].getText().toString().toLowerCase();
                 break;
             case R.id.grpCoreBtn1:
                 setCoreFocus(coreBtn_unfocus, coreBtn[1]);
-                coreString = coreBtn[1].getText().toString();
+                coreString = coreBtn[1].getText().toString().toLowerCase();
                 break;
         }
 
@@ -180,14 +180,11 @@ public class SelectActivity extends AppCompatActivity
     // sending data to next activity
 
     public void getPrice(View v) {
-        Toast.makeText(this,"Diameter = " + diameterString +", Const = "+ constString +
-                ", Core = " + coreString +" are selected!",Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this,PriceDiscount.class);
         intent.putExtra(DIAMETER_KEY, diameterString);
         intent.putExtra(CONSTRUCTION_KEY, constString);
         intent.putExtra(CORE_KEY, coreString);
         startActivity(intent);
-
     }
 
 }

@@ -2,7 +2,6 @@
     <string name="app_name">Asahi Project</string>
 
     <string-array name="diameters">
-        <item>6mm</item>
         <item>8mm</item>
         <item>9mm</item>
         <item>10mm</item>
@@ -28,6 +27,7 @@
         <item>40mm</item>
         <item>44mm</item>
         <item>48mm</item>
+        <item>50mm</item>
         <item>52mm</item>
     </string-array>
 </resources>
