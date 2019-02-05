@@ -10,93 +10,80 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="24dp"
         android:padding="6dp"
         android:text="Select The Construction, Core, and Diameter:"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/grpBtn0"
-        android:layout_width="match_parent"
+        android:layout_width="183dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/buttonunselected"
         android:text="6X19"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/grpBtn1"
+        app:layout_constraintEnd_toStartOf="@+id/grpBtn1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/grpBtn1"
-        android:layout_width="match_parent"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/buttonunselected"
         android:text="6X36"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grpBtn0" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/grpBtn2"
+        app:layout_constraintEnd_toStartOf="@+id/grpBtn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grpBtn0" />
 
     <Button
         android:id="@+id/grpBtn2"
-        android:layout_width="match_parent"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/buttonunselected"
         android:text="8X19"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grpBtn1" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/grpBtn3"
+        app:layout_constraintEnd_toStartOf="@+id/grpBtn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grpBtn1" />
 
     <Button
         android:id="@+id/grpBtn3"
-        android:layout_width="match_parent"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/buttonunselected"
         android:text="18X7"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grpBtn2" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grpBtn2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     <Button
         android:id="@+id/grpCoreBtn0"
         android:layout_width="135dp"
         android:layout_height="57dp"
-        android:layout_marginStart="28dp"
         android:background="@drawable/buttonunselected"
         android:text="FMC"
         android:textAllCaps="false"
@@ -105,15 +92,13 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/grpCoreBtn1"
         app:layout_constraintEnd_toStartOf="@+id/grpCoreBtn1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/grpCoreBtn1"
         android:layout_width="135dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/buttonunselected"
         android:text="SC"
         android:textAllCaps="false"
@@ -122,17 +107,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/grpCoreBtn0"
-        app:layout_constraintTop_toBottomOf="@+id/grpBtn3" />
+        app:layout_constraintTop_toBottomOf="@+id/grpBtn2" />
 
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif"
+        android:gravity="center"
         android:padding="5dp"
         android:text="Diameter"
         android:textAlignment="viewStart"
@@ -159,7 +145,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/grpCoreBtn1"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.44" />
 
     <Button
         android:id="@+id/getPricebtn"
