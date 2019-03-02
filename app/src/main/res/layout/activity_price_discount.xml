@@ -39,7 +39,6 @@
         android:id="@+id/grpGalvinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@drawable/buttonunselected"
         android:padding="8dp"
         android:text="Galvanised"
@@ -49,8 +48,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/grpGalvinBtn1"
         app:layout_constraintEnd_toStartOf="@+id/grpGalvinBtn1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/barrier" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/grpGalvinBtn1"
