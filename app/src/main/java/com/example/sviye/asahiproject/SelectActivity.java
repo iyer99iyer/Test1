@@ -4,17 +4,24 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ActionBarOverlayLayout;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SelectActivity extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private static final String TAG = "SelectActivity";
+
+    private FirebaseAuth mAuth;
 
     public static final String DIAMETER_KEY ="diameter";
     public static final String CORE_KEY="core";
@@ -35,10 +42,20 @@ public class SelectActivity extends AppCompatActivity
 
     Button getPriceBtn;
 
+    private Toolbar mToolBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+
+        mToolBar = findViewById(R.id.main_hello_bar);
+        setSupportActionBar(mToolBar);
+        getSupportActionBar().setTitle("Select Wire");
+
+        mAuth = FirebaseAuth.getInstance();
+
+
 
         spinner = findViewById(R.id.diaSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter
@@ -187,4 +204,29 @@ public class SelectActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+
+        getMenuInflater().inflate(R.menu.asahi_app_menu,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        if (item.getItemId()==R.id.logout_btn){
+
+            FirebaseAuth.getInstance().signOut();
+
+            Intent loginIntent = new Intent(SelectActivity.this,LoginActivity.class);
+            startActivity(loginIntent);
+
+        }
+
+        return true;
+    }
 }

@@ -2,8 +2,10 @@ package com.example.sviye.asahiproject;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -22,7 +24,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    EditText passwordEditText, emailEditText;
+
+    TextInputEditText passwordEditText, emailEditText;
 
     ProgressBar progressBar;
 
@@ -38,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         emailEditText = findViewById(R.id.emailEditText);
         progressBar = findViewById(R.id.progressBar);
 
-
     }
 
 
@@ -52,21 +54,25 @@ public class LoginActivity extends AppCompatActivity {
         if (email.isEmpty()){
             emailEditText.setError("Email Required!");
             emailEditText.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
         if (password.isEmpty()){
             passwordEditText.setError("Password Required");
             passwordEditText.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             emailEditText.setError("Please enter valid email Address!");
             emailEditText.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
         if (password.length()<6){
             passwordEditText.setError("Minimum password length is 6");
             passwordEditText.requestFocus();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
