@@ -10,21 +10,19 @@
         android:id="@+id/priceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="72dp"
         android:text="Base Price"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/priceTextView"
+        app:layout_constraintEnd_toStartOf="@+id/priceTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/priceTextView"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:background="@drawable/pricebox"
         android:gravity="center"
         android:paddingStart="20dp"
@@ -33,139 +31,161 @@
         android:textColor="@color/colorAccent"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/priceText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/grpGalvinBtn"
-        android:layout_width="178dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/buttonunselected"
+        android:padding="8dp"
         android:text="Galvanised"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceText" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/grpGalvinBtn1"
+        app:layout_constraintEnd_toStartOf="@+id/grpGalvinBtn1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/grpGalvinBtn1"
-        android:layout_width="178dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:background="@drawable/buttonunselected"
+        android:padding="8dp"
         android:text="Ungalvanised"
         android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grpGalvinBtn"
+        app:layout_constraintTop_toTopOf="@+id/barrier" />
 
     <EditText
         android:id="@+id/discountEditText"
-        android:layout_width="95dp"
+        android:layout_width="84dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:gravity="left"
         android:hint="Enter..."
-        android:maxLength="2"
         android:inputType="number"
+        android:maxLength="2"
         android:padding="10dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/discountText"
+        app:layout_constraintTop_toTopOf="@+id/barrier2" />
 
     <TextView
         android:id="@+id/priceFinalText"
-        android:layout_width="117dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="128dp"
         android:text="Final Price"
         android:textColor="@color/colorAccent"
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/priceFinalTextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/discountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginBottom="8dp"
         android:text="Discount"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grpGalvinBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/discountEditText"
+        app:layout_constraintEnd_toStartOf="@+id/discountEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/priceFinalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="126dp"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="64dp"
         android:background="@drawable/pricebox"
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="     "
         android:textColor="@color/colorAccent"
         android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/priceFinalText" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/getFinalPriceWithGST" />
 
     <Button
         android:id="@+id/getFinalPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="112dp"
         android:background="@drawable/button"
         android:onClick="getDisPrice"
         android:padding="10dp"
         android:text="Get Price"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/priceFinalTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discountEditText"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintTop_toTopOf="@+id/barrier3" />
 
     <Button
         android:id="@+id/getFinalPriceWithGST"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="156dp"
         android:background="@drawable/button"
         android:onClick="getDisPriceWithGST"
         android:padding="10dp"
         android:text="Price + GST"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/priceFinalTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getFinalPrice" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="priceText,priceTextView"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="grpGalvinBtn1,grpGalvinBtn"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="discountEditText,discountText"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </android.support.constraint.ConstraintLayout>
