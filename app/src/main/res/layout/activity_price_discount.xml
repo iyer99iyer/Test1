@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".PriceDiscount">
 
+    <include
+        android:id="@+id/discount_toolbar"
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/priceText"
         android:layout_width="wrap_content"
@@ -22,7 +29,7 @@
         android:id="@+id/priceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/pricebox"
         android:gravity="center"
         android:paddingStart="20dp"
@@ -33,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/priceText"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/discount_toolbar" />
 
     <Button
         android:id="@+id/grpGalvinBtn"
@@ -110,8 +117,8 @@
 
     <TextView
         android:id="@+id/priceFinalTextView"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="64dp"
@@ -119,6 +126,7 @@
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
+        android:text="    "
         android:textColor="@color/colorAccent"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"

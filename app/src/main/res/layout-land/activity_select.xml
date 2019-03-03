@@ -6,11 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".SelectActivity">
 
+    <include
+        android:id="@+id/main_hello_bar"
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:padding="6dp"
         android:text="Select The Construction, Core, and Diameter:"
         android:textColor="@color/colorPrimary"
@@ -18,12 +25,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/main_hello_bar" />
 
 
     <Button
         android:id="@+id/grpBtn0"
-        android:layout_width="183dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -40,7 +47,7 @@
 
     <Button
         android:id="@+id/grpBtn1"
-        android:layout_width="184dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonunselected"
         android:text="6X36"
@@ -54,7 +61,7 @@
 
     <Button
         android:id="@+id/grpBtn2"
-        android:layout_width="184dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonunselected"
         android:text="8X19"
@@ -68,9 +75,9 @@
 
     <Button
         android:id="@+id/grpBtn3"
-        android:layout_width="184dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/buttonunselected"
         android:text="18X7"
         android:textAllCaps="false"
@@ -100,7 +107,7 @@
         android:id="@+id/grpCoreBtn1"
         android:layout_width="135dp"
         android:layout_height="57dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/buttonunselected"
         android:text="SC"
         android:textAllCaps="false"
@@ -116,7 +123,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif"
@@ -138,25 +145,21 @@
         android:id="@+id/diaSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/getPricebtn"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/grpCoreBtn1"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <Button
         android:id="@+id/getPricebtn"
         android:layout_width="135dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/button"
         android:elevation="100dp"
         android:onClick="getPrice"
@@ -164,7 +167,6 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
